@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CMU TrackIt - Lost & Found</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header>
+    <h1>🎓 CMU TrackIt</h1>
+    <nav>
+      <button onclick="location.href='php/functions.php?action=lost'">+ I've lost</button>
+      <button onclick="location.href='php/functions.php?action=found'">+ I've found</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Lost and Found - Central Mindanao University</h2>
+    <p>Helping CMU students recover lost items easily.</p>
+
+    <form action="php/functions.php" method="GET">
+      <select name="category">
+        <option value="">All categories</option>
+        <option value="ID">ID</option>
+        <option value="Gadgets">Gadgets</option>
+        <option value="Books">Books</option>
+        <option value="Bags">Bags</option>
+        <option value="Keys">Keys</option>
+        <option value="Documents">Documents</option>
+      </select>
+
+      <label>
+        <input type="radio" name="status" value="lost" checked> Lost
+      </label>
+      <label>
+        <input type="radio" name="status" value="found"> Found
+      </label>
+
+      <button type="submit">Search</button>
+    </form>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
